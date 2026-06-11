@@ -50,6 +50,7 @@ LEFT JOIN sales s ON p.product_id = s.product_id
 GROUP BY p.product_id, p.product_name, p.category
 HAVING last_sale_date < '2026-03-01' OR last_sale_date IS NULL
 ORDER BY frozen_money DESC;
+```sql
 
 ### Результаты выполнения SQL-запроса:
 | ID | Товар | Категория | Остаток | Последняя продажа | Доля склада | Заморожено |
